@@ -6,7 +6,6 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  ViewPropTypes,
 } from "react-native";
 
 const s = StyleSheet.create({
@@ -16,29 +15,6 @@ const s = StyleSheet.create({
 });
 
 export default class CCInput extends Component {
-  static propTypes = {
-    field: PropTypes.string.isRequired,
-    label: PropTypes.string,
-    value: PropTypes.string,
-    placeholder: PropTypes.string,
-    keyboardType: PropTypes.string,
-
-    status: PropTypes.oneOf(["valid", "invalid", "incomplete"]),
-
-    containerStyle: ViewPropTypes.style,
-    inputStyle: Text.propTypes.style,
-    labelStyle: Text.propTypes.style,
-    validColor: PropTypes.string,
-    invalidColor: PropTypes.string,
-    placeholderColor: PropTypes.string,
-
-    onFocus: PropTypes.func,
-    onChange: PropTypes.func,
-    onBecomeEmpty: PropTypes.func,
-    onBecomeValid: PropTypes.func,
-    additionalInputProps: PropTypes.shape(TextInput.propTypes),
-  };
-
   static defaultProps = {
     label: "",
     value: "",
